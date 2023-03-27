@@ -3,18 +3,15 @@ from typing import Dict
 # Populate this dictionary with at least two languages.
 # Use integers for keys and strings for values.
 # Example: Key = 1. Value = 'English'.
-lang_dict = { 1 : "English", 2: "Spanish", 3: "Portuguese"
-}
+lang_dict = {1: "English", 2: "Spanish", 3: "Portuguese"}
 
 # Populate this dictionary with appropriate prompts that correspond with the ids from lang_dict.
 # Example: Key = 1. Value = 'What is your name?'.
-name_prompt_dict = {1: 'what is your name?', 2: '¿Cómo te llamas?', 3: 'Qual é o seu nome?'
-}
+name_prompt_dict = {1: 'what is your name?', 2: '¿Cómo te llamas?', 3: 'Qual é o seu nome?'}
 
 # Populate this dictionary with appropriate prompts that correspond with the ids from lang_dict.
 # Example: Key = 1. Value = 'Hello'.
-greetings_dict = {1: 'Hello', 2: 'Hola', 3: 'Olá'
-}
+greetings_dict = {1: 'Hello', 2: 'Hola', 3: 'Olá'}
 
 
 def print_language_options(lang_options: Dict[int, str]) -> None:
@@ -26,8 +23,10 @@ def print_language_options(lang_options: Dict[int, str]) -> None:
     Values are strings representing the name of a language
     :return: None
     """
-    for i in lang_options():
-        print(i, lang_options[i])
+    print("Please choose a language: ")
+    for i in lang_options:
+        print(f'{i}: {lang_options[i]}')
+
 
 
 
